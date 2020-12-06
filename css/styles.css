@@ -1,0 +1,61 @@
+body{
+  /* background-color: #FFC005; */
+  background-color: #E9DADA;
+}
+.navbar{
+  background-color: #282424 !important;
+  padding: 0 15px;
+}
+
+.navbar .collapse a{
+  color: #E9DADA !important;
+  padding: 12px 0;
+}
+.navbar .collapse a:hover{
+  background-color: #FFCD38;
+  color: #282424 !important;
+  /* outline: 5px solid #FFCD38; */
+} 
+
+.navbar .collapse a:active{
+  background-color: #FFC005;
+} 
+
+.jumbotron{
+  /* position: relative; */
+  height: 650px;
+  /* background-color: #282424; */
+  color: #282424;
+  background: url('../images/bg-jumbo.jpg') center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.jumbotron h1{
+  padding: 10px;
+  background-color: #282424;
+  color: #FFC005;
+}
+
+.jumbotron p{
+  padding: 10px;
+  /* background-color: #E9DADA; */
+  background-color: #FFC005;
+}
+
+.logo{
+  position: relative;
+  top: 25%;
+}
+
+.card{
+  width: 20rem;
+  box-shadow: 5px 5px 8px #433C3C;
+  background-color: #FFC005;
+  
+}
+
+.card-img-top{
+  width: 150px;
+}
