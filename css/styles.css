@@ -1,5 +1,4 @@
 body{
-  /* background-color: #FFC005; */
   background-color: #E9DADA;
 }
 .navbar{
@@ -14,7 +13,6 @@ body{
 .navbar .collapse a:hover{
   background-color: #FFCD38;
   color: #282424 !important;
-  /* outline: 5px solid #FFCD38; */
 } 
 
 .navbar .collapse a:active{
@@ -22,9 +20,7 @@ body{
 } 
 
 .jumbotron{
-  /* position: relative; */
   height: 650px;
-  /* background-color: #282424; */
   color: #282424;
   background: url('../images/bg-jumbo.jpg') center;
   background-size: cover;
@@ -40,7 +36,6 @@ body{
 
 .jumbotron p{
   padding: 10px;
-  /* background-color: #E9DADA; */
   background-color: #FFC005;
 }
 
@@ -49,13 +44,37 @@ body{
   top: 25%;
 }
 
-.card{
+.card-yl{
   width: 20rem;
   box-shadow: 5px 5px 8px #433C3C;
   background-color: #FFC005;
-  
+
 }
 
 .card-img-top{
-  width: 150px;
+  width: 30%;
 }
+
+.list-group .list-group-item{
+  width: 100%;
+  background-color:#E9DADA;
+  color: #282424;
+}
+
+.exp img{
+  width: 70%;
+}
+
+.card-bl{
+  background-color: #FFC005;
+  color: #282424;
+  height: 150px;
+  box-shadow: 5px 5px 8px #433C3C;
+}
+
+.card-title{
+  font-weight: bolder;
+  color: #282424;
+}
+
+
