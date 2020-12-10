@@ -1,10 +1,18 @@
 body{
-  background-color: #E9DADA;
+  background-color: #FFFFFF;
 }
 .navbar{
   background-color: #282424 !important;
   padding: 0 15px;
 }
+.navbar-toggler .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 192, 5, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* .navbar-toggler{
+  background-color: #FFCD38;
+  border: none;
+  padding: 0.08rem;
+} */
 
 .navbar .collapse a{
   color: #E9DADA !important;
@@ -45,10 +53,8 @@ body{
 }
 
 .card-yl{
-  width: 20rem;
   box-shadow: 5px 5px 8px #433C3C;
   background-color: #FFC005;
-
 }
 
 .card-img-top{
@@ -57,19 +63,12 @@ body{
 
 .list-group .list-group-item{
   width: 100%;
-  background-color:#E9DADA;
-  color: #282424;
+  background-color:#282424;
+  color: #E9DADA;
 }
 
 .exp img{
   width: 70%;
-}
-
-.card-bl{
-  background-color: #FFC005;
-  color: #282424;
-  height: 150px;
-  box-shadow: 5px 5px 8px #433C3C;
 }
 
 .card-title{
@@ -77,4 +76,20 @@ body{
   color: #282424;
 }
 
+.card-service{
+  background-color: #FFC005;
+  border: none;
+  border-radius: 0 !important;
+}
 
+.card-img{
+  object-fit: cover;
+}
+
+.h-card{
+  height: 13em;
+}
+
+.h-img{
+  height: 14em;
+}
