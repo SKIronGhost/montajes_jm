@@ -8,8 +8,8 @@ $(document).ready(function () {
   function services() {
     width = $(window).width();
     if (width > 991) {
-      $(".sc1").addClass("card-div")
-      $(".sc2").addClass("card-body-service")
+      $(".card-div").css({"position":"relative","height":"auto"})
+      $(".cb").addClass("card-body-service")
       $(".card-service").addClass("h-card")
       $("#up1").html(down1)
       $("#down1").html(up1)
@@ -18,13 +18,13 @@ $(document).ready(function () {
 
     }
     if (width < 991) {
-      $(".sc1").removeClass("card-div")
-      $(".sc2").removeClass("card-body-service")
-      $(".card-service").removeClass("h-card")
       $("#up1").html(up1)
       $("#down1").html(down1)
       $("#up2").html(up2)
       $("#down2").html(down2)
+      $(".card-div").css({"position":"static","height":"13em"})
+      $(".card-service").removeClass("h-card")
+      $(".cb").removeClass("card-body-service")
     }  
   }
   
