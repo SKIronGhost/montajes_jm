@@ -3,8 +3,7 @@ $(document).ready(function(){
   const down1 = $("#down1").html()
   const up2 = $("#up2").html()
   const down2 = $("#down2").html()
-  console.log(up1)
-  console.log(down2)
+
   $(window).resize(function () {
   var width = $(window).width();
   if(width < 1200){
