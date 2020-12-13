@@ -11,7 +11,7 @@ body{
 
 .navbar .collapse a{
   color: #E9DADA !important;
-  padding: 12px 0;
+  padding: 12px;
 }
 .navbar .collapse a:hover{
   background-color: #FFCD38;
@@ -42,6 +42,12 @@ body{
   background-color: #FFC005;
 }
 
+h2{
+  background-color: #282424;
+  color: #FFC005;
+  margin-top: 40px !important;
+}
+
 .logo{
   position: relative;
   top: 25%;
@@ -66,8 +72,31 @@ body{
   width: 70%;
 }
 
+.card-service > .card-div{
+    position: relative;
+}
+
+.card-body-service{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+
 .card-title{
+  display: inline-block;
+  vertical-align: middle;
   font-weight: bolder;
+  color: #282424;
+}
+
+.card-text{
   color: #282424;
 }
 
@@ -82,11 +111,11 @@ body{
 }
 
 .h-card{
-  height: 13em;
+  height: 20em;
 }
 
 .h-img{
-  height: 14em;
+  height: 20em;
 }
 
 .carousel-inner > .carousel-item {
@@ -107,16 +136,24 @@ body{
     margin: 0 auto;
 }
 
-.carousel-control-next, .carousel-control-prev{
+.carousel-control-next{
   width: 5%;
   background-color: #FFC005;
+  border-radius: 0 10px 10px 0;
+}
+
+.carousel-control-prev{
+  width: 5%;
+  background-color: #FFC005;
+  border-radius: 10px 0 0 10px;
 }
 
 .gallery{
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
-  /* background-color: #FFC005;  */
+  /* outline: 30px solid #FFC005; */
+  /* background-color: #282424; */
 }
 
 /* Create four equal columns that sits next to each other */
@@ -151,4 +188,54 @@ body{
 .contact{
   background-color: #282424;
   color: #FFC005
+}
+
+.contact input, .contact textarea{
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #FFC005;
+}
+
+.contact input:enabled, .contact textarea:enabled{
+  color: #E9DADA;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #FFC005;
+}
+
+.contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder{ 
+  color:#E9DADA; 
+} 
+
+.contact input:-moz-placeholder, .contact textarea:-moz-placeholder{
+   /* Firefox 18- */ color:#E9DADA 
+} 
+
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder{
+   /* Firefox 19+ */ color:#E9DADA;
+} 
+
+.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder{
+  color:#E9DADA
+}
+
+.contact input:focus::-webkit-input-placeholder, .contact textarea:focus::-webkit-input-placeholder{
+  color:transparent;
+}
+
+.btn{
+  background-color: #FFC005;
+  color: #282424;
+}
+
+.btn:active{
+  background-color: #E9DADA;
+  color: #282424;
+}
+
+.btn:hover{
+  background-color: #FFCD38;
+  color: #282424;
 }
