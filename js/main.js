@@ -1,13 +1,17 @@
 $(document).ready(function () {
-  const up1 = $("#up1").html();
-  const down1 = $("#down1").html()
-  const up2 = $("#up2").html()
-  const down2 = $("#down2").html()
-  const up3 = $("#up3").html()
-  const down3 = $("#down3").html()
-  const up4 = $("#up4").html()
-  const down4 = $("#down4").html()
-  var width = $(window).width();
+
+  var width = $(window).width()
+
+  var service = []
+  for (i = 0; i < 4; i++) {
+    t = 1+i
+      service.push(
+        {
+          up: $("#up"+t).html(),
+          down: $("#down"+t).html()
+        })
+    }
+    console.log(service)
 
   function services() {
     width = $(window).width();
@@ -16,19 +20,22 @@ $(document).ready(function () {
       $(".cb").addClass("card-body-service")
       $(".card-service").removeClass("h-card")
       $(".card-service").addClass("h-md-card")
-      for (i = 1; i < 5; i++){
-        h = up + i
-        l = down + i
-        console.log(up1)
-        $("#up"+i+"").html(l)
-        $("#down" + i + "").html(h)
+      for (k in service) {
+        console.log(k)
+        f = 1+Number(k)
+        console.log(f)
+        $("#down"+f).html(service[k].up)
+        $("#up"+f).html(service[k].down)
       }
-    }
+      }
+
     if (width < 991) {
-      for (i = 1; i < 5; i++){
-        console.log(up+i)
-        $("#up"+i+"").html("up"+i)
-        $("#down"+i+"").html("down"+i)
+      for (k in service) {
+        console.log(k)
+        f = 1 + Number(k)
+        console.log(f)
+        $("#up"+f).html(service[k].up)
+        $("#down"+f).html(service[k].down)
       }
       $(".card-div").css({"position":"static","height":"13em"})
       $(".card-service").removeClass("h-md-card")
@@ -46,18 +53,15 @@ $(document).ready(function () {
   services()
   })
   
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top-$('#header').height()
-            }, 1000);
-            return false;
-        }
+  $('a[href^="#"]').click(function() {
+    var destino = $(this.hash);
+    if (destino.length == 0) {
+      destino = $('a[name="' + this.hash.substr(1) + '"]');
     }
-  });
-
-  
+    if (destino.length == 0) {
+      destino = $('html');
+    }
+    $('html, body').animate({ scrollTop: destino.offset().top }, 1500);
+    return false;
+    });
 })
