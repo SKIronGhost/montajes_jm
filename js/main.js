@@ -37,7 +37,7 @@ $(document).ready(function () {
         $("#up"+f).html(service[k].up)
         $("#down"+f).html(service[k].down)
       }
-      $(".card-div").css({"position":"static","height":"13em"})
+      $(".card-div").css({"position":"static","height":"22em"})
       $(".card-service").removeClass("h-md-card")
       $(".card-service").addClass("h-card")
       $(".cb").removeClass("card-body-service")
@@ -61,6 +61,10 @@ $(document).ready(function () {
     if (destino.length == 0) {
       destino = $('html');
     }
+
+    $('.navbar-toggler').addClass("collapsed")
+    $('.navbar-collapse').removeClass("show")
+    $('nav button').attr("aria-expanded","false")
     $('html, body').animate({ scrollTop: destino.offset().top }, 1500);
     return false;
     });
