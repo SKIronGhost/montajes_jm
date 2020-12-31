@@ -38,7 +38,7 @@ $(document).ready(function () {
         $("#up"+f).html(service[k].up)
         $("#down"+f).html(service[k].down)
       }
-      $(".card-div").css({"position":"static","height":"22em"})
+      $(".card-div").css({"position":"static","height":"auto"})
       $(".card-service").removeClass("h-md-card")
       $(".card-service").addClass("h-card")
       $(".cb").removeClass("card-body-service")
