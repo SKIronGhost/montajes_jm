@@ -76,5 +76,23 @@ $(document).ready(function () {
     
     $('html, body').animate({ scrollTop: destino.offset().top - $("nav").height()}, 1500);
     return false;
-    });
+  });
+
+  $("#contact-form").submit(function( event ){
+    event.preventDefault();
+
+    $.ajax({
+			type: 'POST',
+			url: '../php/contact.php',
+			data: $(this).serialize(),
+			success: function(data){
+				$("#response").slideDown();
+				$("#response").html(data);
+        $('#response2').modal('show');
+        document.getElementById('contact-form').reset();
+			}
+		});
+
+    return false;
+  });
 })
