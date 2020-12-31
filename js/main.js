@@ -25,9 +25,10 @@ $(document).ready(function () {
         f = 1+Number(k)
         console.log(f)
         $("#down"+f).html(service[k].up)
-        $("#up"+f).html(service[k].down)
+        $("#up" + f).html(service[k].down)
+        
       }
-      }
+    }
 
     if (width < 991) {
       for (k in service) {
@@ -41,6 +42,17 @@ $(document).ready(function () {
       $(".card-service").removeClass("h-md-card")
       $(".card-service").addClass("h-card")
       $(".cb").removeClass("card-body-service")
+      $('a[href^="#n"]').click(function () {
+        $('.navbar-collapse').removeClass("collapse")
+        $('.navbar-collapse').removeClass("show")
+        $('.navbar-collapse').addClass("collapsing")
+        setTimeout(function () {
+          $('.navbar-toggler').addClass("collapsed")
+          $('.navbar-collapse').removeClass("collapsing")
+          $('.navbar-collapse').addClass("collapse")
+          $('nav button').attr("aria-expanded","false")
+        }, 500) 
+      })
     }  
   }
   
@@ -53,7 +65,7 @@ $(document).ready(function () {
   services()
   })
   
-  $('a[href^="#"]').click(function() {
+  $('a[href^="#n"]').click(function() {
     var destino = $(this.hash);
     if (destino.length == 0) {
       destino = $('a[name="' + this.hash.substr(1) + '"]');
@@ -62,15 +74,6 @@ $(document).ready(function () {
       destino = $('html');
     }
     
-    $('.navbar-collapse').removeClass("collapse")
-    $('.navbar-collapse').removeClass("show")
-    $('.navbar-collapse').addClass("collapsing")
-    setTimeout(function () {
-      $('.navbar-toggler').addClass("collapsed")
-      $('.navbar-collapse').removeClass("collapsing")
-      $('.navbar-collapse').addClass("collapse")
-    }, 500) 
-    $('nav button').attr("aria-expanded","false")
     $('html, body').animate({ scrollTop: destino.offset().top - $("nav").height()}, 1500);
     return false;
     });
