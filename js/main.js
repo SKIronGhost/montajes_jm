@@ -61,11 +61,17 @@ $(document).ready(function () {
     if (destino.length == 0) {
       destino = $('html');
     }
-
-    $('.navbar-toggler').addClass("collapsed")
+    
+    $('.navbar-collapse').removeClass("collapse")
     $('.navbar-collapse').removeClass("show")
+    $('.navbar-collapse').addClass("collapsing")
+    setTimeout(function () {
+      $('.navbar-toggler').addClass("collapsed")
+      $('.navbar-collapse').removeClass("collapsing")
+      $('.navbar-collapse').addClass("collapse")
+    }, 500) 
     $('nav button').attr("aria-expanded","false")
-    $('html, body').animate({ scrollTop: destino.offset().top }, 1500);
+    $('html, body').animate({ scrollTop: destino.offset().top - $("nav").height()}, 1500);
     return false;
     });
 })
