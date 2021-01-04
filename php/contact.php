@@ -1,5 +1,6 @@
-<!-- //Importamos las variables del formulario de contacto -->
+
 <?php
+  //Importamos las variables del formulario de contacto 
   @$name = htmlspecialchars($_POST['name']);
   @$email = htmlspecialchars($_POST['email']);
   @$subject = htmlspecialchars($_POST['subject']);
@@ -23,19 +24,9 @@
 
   //Si el mensaje se envía muestra una confirmación -->
     $data = ['response' => 'ok'];
-    header('Content-Type: application/json');
-    echo json_encode($data);
-  
   }
   else{
     $data = ['response' => 'error'];
-    header('Content-Type: application/json');
-    echo json_encode($data);
-
-
-
-
-
 
 
   //Si el mensaje no se envía muestra el mensaje de error
@@ -48,6 +39,9 @@
   //   </div>
   // </div>';
   }
+  
+  header('Content-Type: application/json');
+  echo json_encode($data);
 
         // '<div class="alert alert-warning alert-dismissible fade show" role="alert">
         //   <strong>ERROR, favor inténtalo más tarde</strong>

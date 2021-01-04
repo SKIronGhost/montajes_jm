@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+
+
+
+  console.log("init");
   var width = $(window).width()
 
   var service = []
@@ -75,21 +79,40 @@ $(document).ready(function () {
   });
 
   $("#contact-form").submit(function(event){
+
     event.preventDefault();
 
     console.log($(this).serializeArray())
 
-    // $.ajax({
-		// 	type: 'POST',
-		// 	url: 'php/contact.php',
-		// 	data: $(this).serialize(),
-		// 	success: function(data){
-    //     document.getElementById('contact-form').reset();
-		// 	}
-		// });
+    $.ajax({
+			type: 'POST',
+			url: 'php/contact.php',
+			data: $(this).serialize(),
+			success: function(data){
+        //document.getElementById('contact-form').reset();
+
+        console.log(data);
+        
+        if (data.response=="ok") {
+          alertOk();
+        }else{
+          alertError();
+        }
+
+
+
+			},
+      error: function(data){
+        alertError();
+        //console.log(data);
+
+      }
+		});
 
     return false;
   });
+
+
 
   // var alertList = document.querySelectorAll('.alert')
   //   alertList.forEach(function (alert) {
