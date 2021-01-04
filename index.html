@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/93b57714b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js"></script>
+    
 
     <title>Montajes Industriales JM Ltda. - Desarrolllo de proyectos eléctricos de pequeña, mediana y gran envergadura. Desarrollo de proyectos de energía solar.</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-0">
       <a class="navbar-brand" href="#n">
-        <img src="images/logo_1.png" alt="Logo" width="150" class="pl-2">
+        <img src="images/logo_1.png" alt="Logo" width="150" class="pl-3">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -308,9 +308,9 @@
 
     <!-- ////// GALERIA \\\\\\ -->
 
-    <div class="container-fluid mt-5 justify-content-center p-0" id="ngaleria">
+    <div class="container-fluid mt-5 p-0" id="ngaleria">
       <h2 class="text-center display-4 my-5 p-4">Galería</h2>
-      <div class="row gallery px-5">
+      <div class="row gallery p-3">
         <div class="column">
           <img alt="..." src="images/gallery-1.jpg">
           <img alt="..." src="images/gallery-5.jpg">
@@ -340,9 +340,9 @@
     <div class="container-fluid contact mt-5 px-4 px-sm-5 pt-2 pb-5 my-0" id="ncontacto">
         <h2 class="text-center display-4">Contacto</h2>
         <p class="text-center w-responsive lead mx-auto mb-5 mx-5">Resuelve tus dudas o solicita tú cotización, nuestro equipo estará listo para atender tú necesidad.</p>
-        <div class="row">
-          <div class="col-md-9 my-4">
-            <form id="contact-form" name="contact-form" action="php/contact.php" method="POST">
+        <div class="row justify-content-center">
+          <div class="col-md-6 my-4">
+            <form id="contact-form" name="contact-form" method="POST">
               <div class="row">
                 <div class="col-md-6">
                   <div class="md-form mb-0">
@@ -370,28 +370,37 @@
                 </div>
               </div>
             </form>
-            <div class="text-center text-md-left mt-4 mb-3">
-                <a class="btn" onclick="document.getElementById('contact-form').submit();">Enviar</a>
-            </div>
+          <div class="text-center text-md-left mt-4 mb-3">
+              <a class="btn" onclick="document.getElementById('contact-form').submit();">Enviar</a>
           </div>
-          <div class="col-md-3 text-center">
-            <ul class="list-unstyled mb-0">
-              <li><i class="fas fa-map-marker-alt mb-2 fa-2x"></i>
-                <p class="text-center w-responsive">Manuel Fischman #3790, Estación Central, RM</p>
-              </li>
-              <li><i class="fas fa-phone mt-4 mb-2 fa-2x"></i>
-                <p class="text-center w-responsive">+56 9 8500 4145</p>
-              </li>
-              <li><i class="fas fa-envelope mt-4 mb-2 fa-2x"></i>
-                <p class="text-center w-responsive">contacto@montajesjm.cl</p>
-              </li>
-            </ul>
-          </div>
-          <div id="response" style="display: none;"></div>
+        </div>
+        <div class="col-md-3 text-center">
+          <ul class="list-unstyled mb-0">
+            <li><i class="fas fa-map-marker-alt mb-2 fa-2x"></i>
+              <p class="text-center w-responsive">Manuel Fischman #3790, Estación Central, RM</p>
+            </li>
+            <li><i class="fas fa-phone mt-4 mb-2 fa-2x"></i>
+              <p class="text-center w-responsive">+56 9 8500 4145</p>
+            </li>
+            <li><i class="fas fa-envelope mt-4 mb-2 fa-2x"></i>
+              <p class="text-center w-responsive">contacto@montajesjm.cl</p>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="alert alert-warning alert-dismissible fade hidden " role="alert">
+          <strong>Su mensaje ha sido enviado exitosamente!</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>ERROR, favor inténtalo más tarde</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>
+        </div> -->
+        <div id="response"></div>
         </div>
     </div>
 <!-- Grid row -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

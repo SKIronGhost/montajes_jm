@@ -11,7 +11,7 @@ $(document).ready(function () {
           down: $("#down"+t).html()
         })
     }
-    console.log(service)
+
 
   function services() {
     width = $(window).width();
@@ -21,9 +21,7 @@ $(document).ready(function () {
       $(".card-service").removeClass("h-card")
       $(".card-service").addClass("h-md-card")
       for (k in service) {
-        console.log(k)
         f = 1+Number(k)
-        console.log(f)
         $("#down"+f).html(service[k].up)
         $("#up" + f).html(service[k].down)
         
@@ -32,9 +30,7 @@ $(document).ready(function () {
 
     if (width < 991) {
       for (k in service) {
-        console.log(k)
         f = 1 + Number(k)
-        console.log(f)
         $("#up"+f).html(service[k].up)
         $("#down"+f).html(service[k].down)
       }
@@ -78,21 +74,33 @@ $(document).ready(function () {
     return false;
   });
 
-  $("#contact-form").submit(function( event ){
+  $("#contact-form").submit(function(event){
     event.preventDefault();
 
-    $.ajax({
-			type: 'POST',
-			url: '../php/contact.php',
-			data: $(this).serialize(),
-			success: function(data){
-				$("#response").slideDown();
-				$("#response").html(data);
-        $('#response2').modal('show');
-        document.getElementById('contact-form').reset();
-			}
-		});
+    console.log($(this).serializeArray())
+
+    // $.ajax({
+		// 	type: 'POST',
+		// 	url: 'php/contact.php',
+		// 	data: $(this).serialize(),
+		// 	success: function(data){
+    //     document.getElementById('contact-form').reset();
+		// 	}
+		// });
 
     return false;
   });
+
+  // var alertList = document.querySelectorAll('.alert')
+  //   alertList.forEach(function (alert) {
+  //   new bootstrap.Alert(alert)
+  //   })
+  
+  function alertOk() {
+    $("#response").append('<div class="alert alert-warning alert-dismissible fade show "role="alert"><strong>Su mensaje ha sido enviado exitosamente!</strong><button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button></div>')
+  }
+
+  function alertError() {
+    $("#response").append('<div class="alert alert-warning alert-dismissible fade show "role="alert"><strong>Error, favor inténtelo más tarde</strong><button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button></div>')
+  }
 })

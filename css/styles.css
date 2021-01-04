@@ -8,8 +8,8 @@ body{
 
 .navbar{
   background-color: #282424 !important;
-  padding: 0 15px;
-  height: 60px;
+  padding-left: 0 0 0 15px !important;
+  height: 65px;
 }
 
 .navbar-collapse{
@@ -164,12 +164,14 @@ h2{
 .gallery{
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
 }
 
 .column {
   flex: 25%;
-  max-width: 25%;
+  max-width: 23%;
   padding: 0 4px;
 }
 
